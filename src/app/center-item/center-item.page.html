@@ -1,0 +1,68 @@
+<ion-header >
+  <ion-toolbar>
+    <ion-back-button slot="start"></ion-back-button>
+    <ion-title>Camping Center</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/chatroom">
+        <ion-icon slot="icon-only" name="chatbox-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ 
+ <ion-title class="ion-margin-top">Center's Portfolio</ion-title>
+
+ <ion-grid>
+  <ion-row>
+    <ion-col size="6">
+      <img src="../../assets/bani_mtir.jpg">
+    </ion-col>
+    <ion-col size="6">
+      <img src="../../assets/bouhertma.jpg">
+    </ion-col>
+    <ion-col size="6">
+      <img src="../../assets/camp_les_jasmins.jpg">
+    </ion-col>
+    <ion-col size="6">
+      <img src="">
+    </ion-col>
+  </ion-row>
+</ion-grid>
+<ion-row>
+  <ion-col size="12" class="ion-text-center ion-margin-bottom">
+    <strong>Voir plus</strong>
+  </ion-col>
+</ion-row>
+
+
+  <ion-title class="ion-margin-bottom">Map et localisation</ion-title>
+
+  <div id="mapId2" style="width: 100%; height: 50%"></div>
+
+
+  <ion-title class="ion-margin-bottom">Comments</ion-title>
+  
+  <div style="margin: 5%;padding: 2%;background: lightgray;border-radius: 15px;">
+    <strong>username</strong> <br>Comment test hello
+  </div>
+
+  <div style="margin: 5%;padding: 2%;background: lightgray;border-radius: 15px;">
+    <strong>username</strong> <br>Comment test test 2
+  </div>
+
+
+  <ion-row>
+    <ion-col size="12">
+      <input type="text" name="" placeholder="ecrire nouveau commentaire" style="height: 54px;
+    border-radius: 15px;
+    border: 3px solid lightgrey;
+    margin: 0%;
+    padding: 24px;
+    width: 90%;">
+    </ion-col>
+  </ion-row>
+
+
+</ion-content>

@@ -1,0 +1,36 @@
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      select Center's Camping
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large"> Images</ion-title>
+      <ion-icon name="photo"></ion-icon>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+  
+    
+    <ion-grid>
+      <ion-row>
+        <div *ngIf="url">
+          <img [src]="santizeUrl(url)" height="100" width="150"/>
+         </div>
+    <div *ngIf="imageUrl">
+    <img [src]="santizeUrl(imageUrl)" height="100" width="150"/>
+   </div>
+      </ion-row>
+      <ion-row>
+        <strong>Ready to upload images</strong>
+        <p><ion-button (click)="selectimageOptions()">Select Image</ion-button></p>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

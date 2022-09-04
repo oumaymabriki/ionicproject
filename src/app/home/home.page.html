@@ -1,0 +1,27 @@
+<ion-app>
+  <ion-content [fullscreen]="true">
+    <ion-slides [options]="slideOpts" #slides>
+      <ion-slide *ngFor="let slide of slideImgs" [style.background-image]="'url(' + slide + ')'">
+        <ion-grid>
+          <ion-row class="logo">
+            <ion-col>
+              <ion-img src="assets/logocampers.png"></ion-img>
+              <ion-label>
+                <p class="ion-text-left logoLabel">Enjoy the trip</p>
+                <p class="ion-text-left">with us</p>
+              </ion-label>
+            </ion-col>
+          </ion-row>
+          <div class="authButton">
+            <ion-button size="large" expand="block" shape="round" color="primary"
+              routerLink="/home-page/home-page">
+              <ion-text color="white">Get Started</ion-text>
+            </ion-button>
+          </div>
+        </ion-grid> 
+      </ion-slide>
+    </ion-slides>
+    
+      <ion-router-outlet></ion-router-outlet>
+  </ion-content> 
+  </ion-app>

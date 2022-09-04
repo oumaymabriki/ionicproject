@@ -1,0 +1,175 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="primary" no-border>
+    <ion-title slot="start">
+      For All Campers
+    </ion-title>
+  
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="banner">
+
+    <img src="../../assets/coverr.png" />
+
+    <div class="caption ion-padding">
+      Join With <br>
+      our Camping Trips 
+    </div>
+
+    <div class="search">
+      <ion-item lines="none" class="ion-no-padding">
+        <ion-icon slot="start" name="search-outline"></ion-icon>
+        <ion-input placeholder="Search trips"></ion-input>
+        <ion-button slot='end'>
+          <img src="../../assets/icon/filter.svg" />
+        </ion-button>
+      </ion-item>
+    </div>
+  </div>
+
+  <div class="title">
+    <h2>Last Week Trips</h2>
+
+    <p>See all</p>
+  </div>
+
+
+  <div class="event-slider">
+    <ion-slides [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }" class="default-left-padding">
+      <ion-slide>
+        <ion-col class="ion-text-left">
+          <ion-card>
+            <ion-card-header class="ion-no-padding">
+              <img src="../../assets/trips/trip4.jpg" />
+            </ion-card-header>
+
+            <ion-card-content>
+              <p class="date">17th July, 2022</p>
+              <h2 class="eventname">campi </h2>
+              <p class="location"><ion-icon name="location"></ion-icon>jerba, Tunisie</p>
+
+              <div class="additional-info">
+                <div class="attendees">
+                  <img src="../../assets/persons/person1.svg" />
+                  <img src="../../assets/persons/person1.svg" />
+                  <img src="../../assets/persons/person3.svg" />
+                  <img src="../../assets/persons/person3.svg" />
+                  <div class="count">
+                    <img src="../../assets/persons/person-placeholder.svg" />
+
+                    <p>+7</p>
+                  </div>
+                </div>
+
+                <p class="time">10 Days</p>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-slide>
+      <ion-slide>
+        <ion-col class="ion-text-left">
+          <ion-card>
+            <ion-card-header class="ion-no-padding">
+              <img src="../../assets/trips/trip6.jpg" />
+            </ion-card-header>
+
+            <ion-card-content>
+              <p class="date">23th July, 2022</p>
+              <h2 class="eventname">Campi m3ana</h2>
+              <p class="location"><ion-icon name="location"></ion-icon>Beja, 3in bou ragba</p>
+
+              <div class="additional-info">
+                <div class="attendees">
+                  <img src="../../assets/persons/person1.svg" />
+                  <img src="../../assets/persons/person1.svg" />
+                  <img src="../../assets/persons/person3.svg" />
+                  <img src="../../assets/persons/person3.svg" />
+                  <div class="count">
+                    <img src="../../assets/persons/person-placeholder.svg" />
+
+                    <p>+3</p>
+                  </div>
+                </div>
+
+                <p class="time">7 Days</p>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-slide>
+      <ion-slide>
+        <ion-col class="ion-text-left">
+          <ion-card>
+            <ion-card-header class="ion-no-padding">
+              <img src="../../assets/trips/trip3.jpg" />
+            </ion-card-header>
+
+            <ion-card-content>
+              <p class="date">23th July, 2022</p>
+              <h2 class="eventname">camping event</h2>
+              <p class="location"><ion-icon name="location"></ion-icon>Beja, 3in bou ragba</p>
+
+              <div class="additional-info">
+                <div class="attendees">
+                  <img src="../../assets/persons/person1.svg" />
+                  <img src="../../assets/persons/person1.svg" />
+                  <img src="../../assets/persons/person3.svg" />
+                  <img src="../../assets/persons/person3.svg" />
+                  <div class="count">
+                    <img src="../../assets/persons/person-placeholder.svg" />
+
+                    <p>+4</p>
+                  </div>
+                </div>
+
+                <p class="time">5 Days</p>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-slide>
+      <ion-slide>
+        <ion-col class="ion-text-left">
+          <ion-card>
+            <ion-card-header class="ion-no-padding">
+              <img src="../../assets/trips/trip1.jpg" />
+            </ion-card-header>
+
+            <ion-card-content>
+              <p class="date">23th July, 2022</p>
+              <h2 class="eventname">Tokhrej m3ana!</h2>
+              <p class="location"><ion-icon name="location"></ion-icon>Beja, 3in bou ragba</p>
+
+              <div class="additional-info">
+                <div class="attendees">
+                  <img src="../../assets/persons/person1.svg" />
+                  <img src="../../assets/persons/person1.svg" />
+                  <img src="../../assets/persons/person3.svg" />
+                  <img src="../../assets/persons/person3.svg" />
+                  <div class="count">
+                    <img src="../../assets/persons/person-placeholder.svg" />
+
+                    <p>+5</p>
+                  </div>
+                </div>
+
+                <p class="time">5 Days</p>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+  <div class="default-top-padding title">
+    <h2>Live right now</h2>
+
+    <p>See all</p>
+  </div>
+<div>
+  <app-center-items></app-center-items>
+</div>
+</ion-content>

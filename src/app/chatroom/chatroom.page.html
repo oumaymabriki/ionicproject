@@ -1,0 +1,25 @@
+ <!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>Welcome to the chat room</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="currentUser" placeholder="currentUser"></ion-input>
+    </ion-item>
+    <br> <br><ion-button ion-button ful (click)="joinChat()" routerLink="/home-page/chat" [disabled]="currentUser ===''" class="btn-jointed">Join Chat as {{currentUser}}</ion-button>
+</ion-content>  -->
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Welcome to the chat room</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="currentUser" placeholder="enter your nickname"></ion-input>
+    </ion-item>
+    <br> <br><ion-button ion-button ful (click)="joinChat()" [disabled]="currentUser ===''" class="btn-jointed">Join Chat as {{currentUser}}</ion-button>
+</ion-content> 

@@ -1,0 +1,7 @@
+{
+  "name": "campingprojet",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,25 @@
+.btn-jointed {
+    transform: translateY(35vh);
+        ion-button {
+            width: 80%;
+            margin: auto;
+            margin-bottom: 1vh;
+            padding-left: 50%;  
+            ion-text {
+                font-size: 0.9em;
+                text-transform: none;
+                color: white;
+            }
+        }  
+};
+ion-content {
+    --background: url('../../assets/icon/chat\(1\).png') no-repeat center ;
+    ion-grid {
+        transform: translateY(10vh);
+        ion-label, p {
+            font-size: 1.8rem;
+            font-weight: bold;
+            letter-spacing: 0.8px;
+        }
+    }
+  }
