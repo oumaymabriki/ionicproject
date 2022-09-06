@@ -73,6 +73,10 @@ const routes: Routes = [
         path: 'edit-password',
         loadChildren: () => import('../edit-password/edit-password.module').then( m => m.EditPasswordPageModule)
       },
+      {
+        path: 'users-item',
+        loadChildren: () => import('../users-item/users-item.module').then( m => m.UsersItemPageModule)
+      },
     ]
   }
 ];

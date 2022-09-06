@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Route, Router } from '@angular/router';
-//import { AuthService } from '../auth/auth.service';
-import { Storage } from '@ionic/storage';
-import { AuthConstants } from './../config/auth-constants';
+import { FormResponse } from '../models/form-response';
+import { LoginForm } from '../models/login';
 import { AuthService } from '../services/auth.service';
-import { StorageService } from '../services/storage.service';
-import { ToastService } from '../services/toast.service';
+//import { AuthService } from '../auth/auth.service';
+//import { Storage } from '@ionic/storage';
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -14,18 +13,15 @@ import { ToastService } from '../services/toast.service';
   providers:[]
 })
 export class LoginPage implements OnInit {
+  [x: string]: any;
 
   form: FormGroup;
   type = true;
-  postData = {
-    email: '',
-    password: ''
-  };
+  data='';
+  loginForm = new LoginForm();
+  fResponse = new FormResponse();
 
-  constructor(  private router: Router,
-    private authService: AuthService,
-    private storageService: StorageService,
-    private toastService: ToastService) { }
+  constructor( private router: Router, private authservice: AuthService) { }
 
   ngOnInit() {
     this.form = new FormGroup({
@@ -55,41 +51,23 @@ export class LoginPage implements OnInit {
 // clearToken(){
 //   this.storage.remove('accesToken');
 // }
-validateInputs() {
-  console.log(this.postData);
-  const email = this.postData.email.trim();
-  const password = this.postData.password.trim();
-  return (
-    this.postData.email &&
-    this.postData.password &&
-    email.length > 0 &&
-    password.length > 0
-  );
-}
  signIn() {
-  if (this.validateInputs()) {
-    this.authService.login(this.postData).subscribe(
-      (res: any) => {
-        if (res.userData) {
-          // Storing the User data.
-          this.storageService
-            .store(AuthConstants.AUTH, res.userData)
-            // eslint-disable-next-line @typescript-eslint/no-shadow
-            .then(res => {
-              this.router.navigate(['camperprofile']);
-            });
-        } else {
-          this.toastService.presentToast('Incorrect email and password.');
+     if(!this.form.valid) {
+       this.form.markAllAsTouched();
+       return;
+     }
+     console.log(this.form.value);
+     //this.service.login(this.form.value).subscribe();
+     this.authservice.authenticate(this.loginForm).toPromise()
+     .then(res => {
+       this.fResponse.setMessage('Authenticated succeed.');
+       localStorage.setItem('token', res.toString());
+       if(this.user.role === 'camper'){
+        this.router.navigate(['/camperprofile']);
         }
-      },
-      (error: any) => {
-        this.toastService.presentToast('Network Issue.');
-      }
-    );
-  } else {
-    this.toastService.presentToast(
-      'Please enter email/username or password.'
-    );
-  }
-}
+        else{ this.router.navigate(['/adminprofile']); }
+       this.router.navigate(['/']);
+     })
+     .catch(err => this.fResponse.setError(err.error.error));
+   }
 }

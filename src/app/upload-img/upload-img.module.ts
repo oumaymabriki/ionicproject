@@ -16,10 +16,10 @@ import { UploadImgPage } from './upload-img.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    // File,
-    // Camera,
-    // ImagePicker,
-    // Crop,
+     File,
+     Camera,
+     ImagePicker,
+     Crop,
     UploadImgPageRoutingModule
   ],
   declarations: [UploadImgPage]

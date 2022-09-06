@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { AddCenterPageRoutingModule } from './add-center-routing.module';
 
 import { AddCenterPage } from './add-center.page';
+import { UploadImgPage } from '../upload-img/upload-img.page';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { AddCenterPage } from './add-center.page';
     IonicModule,
     AddCenterPageRoutingModule
   ],
-  declarations: [AddCenterPage]
+  declarations: [AddCenterPage,UploadImgPage]
 })
 export class AddCenterPageModule {}

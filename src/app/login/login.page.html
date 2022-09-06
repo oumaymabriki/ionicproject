@@ -17,6 +17,7 @@
 
     <ion-fab vertical="top" horizontal="end">
       <ion-fab-button color="danger" type="submit" (click)="signIn()">
+
         <ion-icon name="arrow-forward-outline"></ion-icon>
       </ion-fab-button>
     </ion-fab>
@@ -39,9 +40,7 @@
           <ion-input 
             formControlName="email" 
             placeholder="Email Address" 
-            type="email"
-            [(ngModel)]="postData.email"
-          >
+            type="email">
           </ion-input>
         </ion-item>
         <ion-text *ngIf="!form.get('email').valid && form.get('email').touched">
@@ -67,8 +66,7 @@
           <ion-input 
             formControlName="password" 
             placeholder="Password" 
-            [type]="type ? 'password' : 'text'"
-            [(ngModel)]="postData.password">
+            [type]="type ? 'password' : 'text'">
           </ion-input>
         </ion-item>
         <ion-text *ngIf="!form.get('password').valid && form.get('password').touched">
@@ -85,7 +83,7 @@
     </form>
 
     <ion-item lines="none" class="ion-padding-top">
-      <ion-text color="danger" slot="start" (click)="forgotPassword()">
+      <ion-text color="danger" slot="start" routerLink="/home-page/edit-password" (click)="forgotPassword()">
         Forgot password?
       </ion-text>
       <ion-text color="dark" slot="end" 

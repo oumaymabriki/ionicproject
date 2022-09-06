@@ -38,8 +38,7 @@
               <ion-input 
                 formControlName="name" 
                 placeholder="Name" 
-                type="text"
-                [(ngModel)]="postData.fullName">
+                type="text">
               </ion-input>
             </ion-item>
             <ion-text *ngIf="!form.get('name').valid && form.get('name').touched">
@@ -72,8 +71,7 @@
                 type="tel"
                 minlength="10"
                 maxlength="10"
-                (ionChange)="changeNumber($event)"
-                [(ngModel)]="postData.phoneNumber">
+                (ionChange)="changeNumber($event)">
               </ion-input>
             </ion-item>
             <ion-text *ngIf="!form.get('phone').valid && form.get('phone').touched">
@@ -92,8 +90,7 @@
               <ion-input 
                 formControlName="email" 
                 placeholder="Email Address" 
-                type="email"
-                [(ngModel)]="postData.email">
+                type="email">
               </ion-input>
             </ion-item>
             <ion-text *ngIf="!form.get('email').valid && form.get('email').touched">
@@ -120,8 +117,7 @@
               <ion-input 
                 formControlName="password" 
                 placeholder="Password" 
-                [type]="type ? 'password' : 'text'"
-                [(ngModel)]="postData.password">
+                [type]="type ? 'password' : 'text'">
               </ion-input>
             </ion-item>
             <ion-text *ngIf="!form.get('password').valid && form.get('password').touched">
@@ -139,7 +135,7 @@
 
         <ion-item lines="none" class="ion-padding-top">
           <ion-text color="danger" slot="start">
-            Already have an account?
+            Already registred?
           </ion-text>
           <ion-text color="dark" slot="end" 
             routerLink="/home-page/login">

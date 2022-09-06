@@ -6,7 +6,25 @@ import { SignUpPage } from './sign-up.page';
 const routes: Routes = [
   {
     path: '',
-    component: SignUpPage
+    component: SignUpPage,
+    children:[
+      {
+        path: 'login',
+        loadChildren: () => import('../login/login.module').then( m => m.LoginPageModule)
+      },
+      {
+        path: 'opt',
+        loadChildren: () => import('../opt/opt.module').then( m => m.OptPageModule)
+      },
+      {
+        path: 'camperprofile',
+        loadChildren: () => import('../camperprofile/camperprofile.module').then( m => m.CamperprofilePageModule)
+      },
+      {
+        path: 'adminprofile',
+        loadChildren: () => import('../adminprofile/adminprofile.module').then( m => m.AdminprofilePageModule)
+      },
+    ]
   }
 ];
 

@@ -23,8 +23,8 @@ export class CenterItemPage implements OnInit {
   constructor(
 
     public loadingController: LoadingController,
-    private router: Router,
-    private http: HttpClient,
+    //private router: Router,
+   // private http: HttpClient,
 
 ) {
 
@@ -48,17 +48,6 @@ export class CenterItemPage implements OnInit {
 
       this.getLocation();
     }, 5000);
-   //get single data camping
-   this.http.get('http://localhost:8000/FindCenter/10')
-   .subscribe((data) => {
-
-       console.log(data);
-
-       this.single = data ;
-
-        //this.content.scrollToBottom();
-
-    });
 
   }
   ngOnInit(): void {
@@ -114,10 +103,6 @@ export class CenterItemPage implements OnInit {
 
 
     // router
-    this.router.navigateByUrl('/new-route', {
-      }).then(() => {
-        this.router.navigate(['/new-route']);
-    });
   }
 
 }

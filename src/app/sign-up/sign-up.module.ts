@@ -16,7 +16,6 @@ import { HttpClient, HttpHandler } from '@angular/common/http';
     ReactiveFormsModule,
     IonicModule,
     NgOtpInputModule,
-    HttpClient,
     SignUpPageRoutingModule
   ],
   declarations: [SignUpPage]
