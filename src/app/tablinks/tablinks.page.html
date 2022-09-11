@@ -2,7 +2,7 @@
 
   <ion-tab-bar slot="bottom" slot="top" color="primary">
 
-    <ion-tab-button tab="login">
+    <ion-tab-button *ngIf="appStorage.getItem('token')==null" tab="login">
       <ion-icon name="person-circle-outline"></ion-icon>
       <ion-label>Login</ion-label>
     </ion-tab-button>

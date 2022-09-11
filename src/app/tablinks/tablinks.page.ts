@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TablinksPage implements OnInit {
 
+  appStorage = localStorage;
+
   constructor() { }
 
   ngOnInit() {
