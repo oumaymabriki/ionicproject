@@ -12,4 +12,6 @@ export class AddCenterPage implements OnInit {
   ngOnInit() {
   }
 
+  save() {}
+
 }

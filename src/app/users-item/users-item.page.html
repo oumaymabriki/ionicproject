@@ -1,11 +1,9 @@
- <ion-header>
+<ion-header>
   <ion-toolbar color="danger">
-    <ion-title align="center" >List users</ion-title>
-    
-      <ion-button fill="clear" class="ion-margin"  (click)="modalCtrl.dismiss()">
-        <ion-icon name="arrow-back" slot="icon-only" color="white"></ion-icon>
-      </ion-button>
-    
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Users</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -16,8 +14,8 @@
         <ion-label>abir rx</ion-label>
       </ion-item>
       <ion-item-options side="end">
-        <ion-item-option (click)="unread(item)">View</ion-item-option>
-        <ion-item-option (click)="unread(item)">DELETE</ion-item-option>
+        <ion-item-option (click)="unread()">View</ion-item-option>
+        <ion-item-option (click)="unread()">DELETE</ion-item-option>
   
       </ion-item-options>
     </ion-item-sliding>
@@ -27,8 +25,8 @@
         <ion-label>Oumayma briki</ion-label>
       </ion-item>
       <ion-item-options side="end">
-        <ion-item-option (click)="unread(item)">View</ion-item-option>
-        <ion-item-option (click)="unread(item)">Delete</ion-item-option>
+        <ion-item-option (click)="unread()">View</ion-item-option>
+        <ion-item-option (click)="unread()">Delete</ion-item-option>
       </ion-item-options>
     </ion-item-sliding>
     <ion-item-sliding>
@@ -36,8 +34,8 @@
         <ion-label>khalil selmi</ion-label>
       </ion-item>
       <ion-item-options side="end">
-        <ion-item-option (click)="unread(item)">View</ion-item-option>
-        <ion-item-option (click)="unread(item)">Delete</ion-item-option>
+        <ion-item-option (click)="unread()">View</ion-item-option>
+        <ion-item-option (click)="unread()">Delete</ion-item-option>
       </ion-item-options>
     </ion-item-sliding>
   </ion-list>

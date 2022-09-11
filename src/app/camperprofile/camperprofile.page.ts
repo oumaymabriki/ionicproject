@@ -29,8 +29,9 @@ export class CamperprofilePage implements OnInit {
     else {this.back = false;}
   }
 
-
-
+  loadInfo() {}
+  logout() {}
+  
 // loadInfo(){
 // this.service.getInfo().subscribe( res =>{
 //   // eslint-disable-next-line @typescript-eslint/dot-notation

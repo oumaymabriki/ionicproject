@@ -1,16 +1,22 @@
-<ion-header class="ion-no-border">
-  <ion-toolbar color="none" no-border>
-    <div class="title">
-      <h2>Centers's Portfolio</h2>
-  
-      <p>See all</p>
-    </div>
+
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Centers</ion-title>
   </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>See all</ion-label>
+  </ion-item>
   <div class="center-slider">
     <ion-slides [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }" class="default-left-padding">
       <ion-slide>
         <ion-col class="ion-text-left">
-          <ion-card routerLink="home-page/center-item">
+          <ion-card routerLink="/centers/1">
             <ion-card-header class="ion-no-padding">
               <img src="../../assets/bni_mtir.jpg" />
             </ion-card-header>
@@ -117,4 +123,4 @@
       </ion-slide>
     </ion-slides>
   </div>
-</ion-header>
+</ion-content>

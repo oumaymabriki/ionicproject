@@ -1,31 +1,38 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>add-center</ion-title>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Center details</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <!-- List of  Items -->
-<ion-list>
-  <ion-item>
-    <ion-label>centername</ion-label>
-    <ion-input type="text" name="centername"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label>longitude</ion-label>
-    <ion-input type="text" name="long"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label>latitude</ion-label>
-    <ion-input type="text" name="lat"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label>Description of Center</ion-label>
-    <ion-input type="text" name="desc"></ion-input>
-  </ion-item>
-  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-    <ion-button type="submit" (click)="save()" class="btn btn-primary text-end">Save</ion-button>
-  </div>
-</ion-list>
-<app-upload-img></app-upload-img>
+<ion-card>
+  <ion-card-content>
+    <ion-list>
+      <ion-item>
+        <ion-label position="stacked">Center Name</ion-label>
+        <ion-input type="text" name="centername"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">longitude</ion-label>
+        <ion-input type="text" name="long"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">latitude</ion-label>
+        <ion-input type="text" name="lat"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Description of Center</ion-label>
+        <ion-textarea type="text" name="desc" rows="3"></ion-textarea>
+      </ion-item>
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <ion-button type="submit" (click)="save()" class="btn btn-primary text-end">Save</ion-button>
+      </div>
+    </ion-list>
+    <app-upload-img></app-upload-img>
+  </ion-card-content>
+</ion-card>
 </ion-content>

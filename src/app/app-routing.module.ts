@@ -6,6 +6,22 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
+  {
+    path: 'users',
+    loadChildren: () => import('../app/users-item/users-item.module').then( m => m.UsersItemPageModule)
+  },
+  {
+    path: 'centers',
+    loadChildren: () => import('../app/center-items/center-items.module').then( m => m.CenterItemsPageModule)
+  },
+  {
+    path: 'centers/:id',
+    loadChildren: () => import('../app/center-item/center-item.module').then( m => m.CenterItemPageModule)
+  },
+  {
+    path: 'centers/edit/:id',
+    loadChildren: () => import('../app/add-center/add-center.module').then( m => m.AddCenterPageModule)
+  },
   /*
    {
      path: '',

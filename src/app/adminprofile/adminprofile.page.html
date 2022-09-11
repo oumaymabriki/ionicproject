@@ -1,9 +1,7 @@
 <ion-header>
   <ion-toolbar color="danger">
     <ion-buttons slot="start">
-      <ion-button expand="block">
-        <ion-icon name="arrow-back"></ion-icon>
-      </ion-button>
+      <ion-back-button></ion-back-button>
     </ion-buttons>
     <ion-title>Dashbord Admin</ion-title>
   </ion-toolbar>
@@ -33,7 +31,7 @@
 
 
       <ion-col size="6">
-        <ion-card color="danger">
+        <ion-card routerLink="/users" color="danger">
           <ion-icon name="people"></ion-icon>
           <ion-text>
             <h2>Users</h2>
@@ -51,7 +49,7 @@
       </ion-col>
 
       <ion-col size="6">
-        <ion-card color="secondary">
+        <ion-card routerLink="/centers" color="secondary">
           <ion-icon name="list"></ion-icon>
           <ion-text>
             <h2>Centers</h2>
@@ -60,7 +58,7 @@
       </ion-col>
 
       <ion-col size="6">
-        <ion-card color="tertiary">
+        <ion-card routerLink="/centers/edit/new" color="tertiary">
           <ion-icon name="add"></ion-icon>
           <ion-text>
             <h2>Add Center</h2>
