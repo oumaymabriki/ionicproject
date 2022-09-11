@@ -7,4 +7,5 @@ export class User {
     role: string = '';
     phoneNUmber: number = 0;
     password: string = '';
+    token?: string = '';
 }

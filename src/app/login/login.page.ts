@@ -51,23 +51,23 @@ export class LoginPage implements OnInit {
 // clearToken(){
 //   this.storage.remove('accesToken');
 // }
- signIn() {
+ async signIn() {
      if(!this.form.valid) {
        this.form.markAllAsTouched();
        return;
      }
      console.log(this.form.value);
      //this.service.login(this.form.value).subscribe();
-     this.authservice.authenticate(this.loginForm).toPromise()
+     await this.authservice.authenticate(this.loginForm).toPromise()
      .then(res => {
        this.fResponse.setMessage('Authenticated succeed.');
-       localStorage.setItem('token', res.toString());
-       if(this.user.role === 'camper'){
-        this.router.navigate(['/camperprofile']);
+       localStorage.setItem('token', res.token);
+       if(res.role === 'camper'){
+        this.router.navigate(['camperprofile']);
         }
-        else{ this.router.navigate(['/adminprofile']); }
+        else{ this.router.navigate(['adminprofile']); }
        this.router.navigate(['/']);
      })
-     .catch(err => this.fResponse.setError(err.error.error));
+     .catch(err => this.fResponse.setError(err.error));
    }
 }

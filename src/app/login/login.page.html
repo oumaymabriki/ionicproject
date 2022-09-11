@@ -37,7 +37,7 @@
                 color="medium"
                 (click)="changeType()">
               </ion-icon>
-          <ion-input 
+          <ion-input [(ngModel)]="loginForm.email"
             formControlName="email" 
             placeholder="Email Address" 
             type="email">
