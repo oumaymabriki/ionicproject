@@ -11,8 +11,8 @@ import { Camera } from '@awesome-cordova-plugins/camera/ngx';
 import { ImagePicker } from '@awesome-cordova-plugins/image-picker/ngx';
 import { Crop } from '@ionic-native/crop/ngx';
 import { environment } from 'src/environments/environment';
-import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
-import { HttpClient, HttpHandler } from '@angular/common/http';
+//import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
+import { HttpClientModule } from '@angular/common/http';
 import { CamperprofilePage } from './camperprofile/camperprofile.page';
 
 // const config: SocketIoConfig = {
@@ -24,13 +24,17 @@ import { CamperprofilePage } from './camperprofile/camperprofile.page';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule ],
+  imports: [
+    BrowserModule, 
+    IonicModule.forRoot(), 
+    AppRoutingModule,
+    HttpClientModule
+  ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     File,
     Camera,
     ImagePicker,
     Crop,
-    HttpClient,
   ],
   bootstrap: [AppComponent],
 })

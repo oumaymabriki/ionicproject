@@ -63,7 +63,7 @@
             color="medium"
             (click)="changeType()">
           </ion-icon>
-          <ion-input 
+          <ion-input [(ngModel)]="loginForm.password"
             formControlName="password" 
             placeholder="Password" 
             [type]="type ? 'password' : 'text'">

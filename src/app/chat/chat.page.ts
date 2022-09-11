@@ -2,7 +2,6 @@
 /* eslint-disable prefer-const */
 import { Component, OnInit } from '@angular/core';
 import { NavController, NavParams, ToastController } from '@ionic/angular';
-import { Socket } from 'ngx-socket-io';
 import { Observable } from 'rxjs';
 
 @Component({

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NavController } from '@ionic/angular';
-import { Socket } from 'ngx-socket-io';
 
 @Component({
   selector: 'app-chatroom',
@@ -11,7 +10,7 @@ import { Socket } from 'ngx-socket-io';
 export class ChatroomPage implements OnInit {
   currentUser='';
 
-  constructor(private socket: Socket,
+  constructor(//private socket: Socket,
     public navCntrl: NavController,
     public router: Router
     ) { }

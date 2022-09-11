@@ -7,7 +7,6 @@ import { IonicModule } from '@ionic/angular';
 import { LoginPageRoutingModule } from './login-routing.module';
 
 import { LoginPage } from './login.page';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
@@ -15,7 +14,6 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     IonicModule,
     LoginPageRoutingModule,
-    HttpClient
   ],
   declarations: [LoginPage]
 })
