@@ -8,4 +8,5 @@ export class User {
     phoneNUmber: number = 0;
     password: string = '';
     token?: string = '';
+    photo: string = ''
 }
