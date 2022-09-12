@@ -16,7 +16,7 @@
     <ion-slides [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }" class="default-left-padding">
       <ion-slide *ngFor="let center of centers">
         <ion-col class="ion-text-left">
-          <ion-card routerLink="/centers/edit/{{center._id}}">
+          <ion-card routerLink="/centers/{{center._id}}">
             <ion-card-header class="ion-no-padding">
               <img src="../../assets/bni_mtir.jpg" />
             </ion-card-header>
