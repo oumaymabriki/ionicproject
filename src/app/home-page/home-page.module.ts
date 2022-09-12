@@ -17,6 +17,6 @@ import { CenterItemPage } from '../center-item/center-item.page';
     IonicModule,
     HomePagePageRoutingModule,
   ],
-  declarations: [HomePagePage, CenterItemsPage, CenterItemPage]
+  declarations: [HomePagePage, CenterItemPage]
 })
 export class HomePagePageModule {}

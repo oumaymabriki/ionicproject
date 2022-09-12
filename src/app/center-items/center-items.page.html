@@ -14,16 +14,16 @@
   </ion-item>
   <div class="center-slider">
     <ion-slides [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }" class="default-left-padding">
-      <ion-slide>
+      <ion-slide *ngFor="let center of centers">
         <ion-col class="ion-text-left">
-          <ion-card routerLink="/centers/1">
+          <ion-card routerLink="/centers/edit/{{center._id}}">
             <ion-card-header class="ion-no-padding">
               <img src="../../assets/bni_mtir.jpg" />
             </ion-card-header>
   
             <ion-card-content>
               <p class="date">17th July, 2022</p>
-              <h2 class="eventname">Bni mtir </h2>
+              <h2 class="eventname">{{center.centername}} </h2>
               <p class="location"><ion-icon name="location"></ion-icon>Seliana</p>
   
               <div class="additional-info">
@@ -33,86 +33,6 @@
                   <ion-icon name='star-half'></ion-icon>
                   <ion-icon name='star-half-sharp'></ion-icon>
                  
-                </div>
-  
-                <p class="time">15 Km</p>
-              </div>
-            </ion-card-content>
-          </ion-card>
-        </ion-col>
-      </ion-slide>
-      <ion-slide>
-        <ion-col class="ion-text-left">
-          <ion-card routerLink="center-item">
-            <ion-card-header class="ion-no-padding">
-              <img src="../../assets/bouhertma.jpg" />
-            </ion-card-header>
-  
-            <ion-card-content>
-              <p class="date">23th July, 2022</p>
-              <h2 class="eventname">Bouhertma</h2>
-              <p class="location"><ion-icon name="location"></ion-icon>Sousse</p>
-  
-              <div class="additional-info">
-                <div class="attendees">
-                  <ion-icon name='star'></ion-icon>
-                  <ion-icon name='star'></ion-icon>
-                  <ion-icon name='star-half'></ion-icon>
-                  <ion-icon name='star-half-sharp'></ion-icon>
-                 
-                </div>
-  
-                <p class="time">10 Km</p>
-              </div>
-            </ion-card-content>
-          </ion-card>
-        </ion-col>
-      </ion-slide>
-      <ion-slide>
-        <ion-col class="ion-text-left">
-          <ion-card routerLink="center-item">
-            <ion-card-header class="ion-no-padding">
-              <img src="../../assets/center.jpg" />
-            </ion-card-header>
-  
-            <ion-card-content>
-              <p class="date">23th July, 2022</p>
-              <h2 class="eventname">BNi Mtir</h2>
-              <p class="location"><ion-icon name="location"></ion-icon>Beja</p>
-  
-              <div class="additional-info">
-                <div class="attendees">
-                  <ion-icon name='star'></ion-icon>
-                  <ion-icon name='star'></ion-icon>
-                  <ion-icon name='star-half'></ion-icon>
-                  <ion-icon name='star-half-sharp'></ion-icon>
-                 
-                </div>
-  
-                <p class="time">20 Km</p>
-              </div>
-            </ion-card-content>
-          </ion-card>
-        </ion-col>
-      </ion-slide>
-      <ion-slide>
-        <ion-col class="ion-text-left">
-          <ion-card  routerLink="center-item">
-            <ion-card-header class="ion-no-padding">
-              <img src="../../assets/camp_les_jasmins.jpg" />
-            </ion-card-header>
-  
-            <ion-card-content>
-              <p class="date">23th July, 2022</p>
-              <h2 class="eventname">Camp les Jasmins</h2>
-              <p class="location"><ion-icon name="location"></ion-icon>Nabeul</p>
-  
-              <div class="additional-info">
-                <div class="attendees">
-                  <ion-icon name='star'></ion-icon>
-                  <ion-icon name='star'></ion-icon>
-                  <ion-icon name='star-half'></ion-icon>
-                  <ion-icon name='star-half-sharp'></ion-icon>
                 </div>
   
                 <p class="time">15 Km</p>

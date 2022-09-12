@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Center } from '../models/center';
+import { CentersService } from '../services/centers.service';
 
 @Component({
   selector: 'app-center-items',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CenterItemsPage implements OnInit {
 
-  constructor() { }
+  centers: Center[] = [];
 
-  ngOnInit() {
+  constructor(private centerService: CentersService) { }
+
+  async ngOnInit() {
+    await this.centerService.getCenters().toPromise()
+    .then(res => this.centers = res)
+    .catch(err => console.log)
   }
 
 }

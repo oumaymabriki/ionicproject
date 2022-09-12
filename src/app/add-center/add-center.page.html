@@ -3,7 +3,8 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>Center details</ion-title>
+    <ion-title *ngIf="center._id.length==0">New Center</ion-title>
+    <ion-title *ngIf="center._id.length>0">Update center</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -14,24 +15,26 @@
     <ion-list>
       <ion-item>
         <ion-label position="stacked">Center Name</ion-label>
-        <ion-input type="text" name="centername"></ion-input>
+        <ion-input [(ngModel)]="center.centername" type="text" name="centername"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label position="stacked">longitude</ion-label>
-        <ion-input type="text" name="long"></ion-input>
+        <ion-input type="number" [(ngModel)]="center.longitude" name="long"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label position="stacked">latitude</ion-label>
-        <ion-input type="text" name="lat"></ion-input>
+        <ion-input type="number" [(ngModel)]="center.latitude" name="lat"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label position="stacked">Description of Center</ion-label>
-        <ion-textarea type="text" name="desc" rows="3"></ion-textarea>
+        <ion-textarea type="text" [(ngModel)]="center.description" name="desc" rows="3"></ion-textarea>
       </ion-item>
-      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+      <br>
+      <div class="ion-text-end">
         <ion-button type="submit" (click)="save()" class="btn btn-primary text-end">Save</ion-button>
       </div>
     </ion-list>
+    <br>
     <app-upload-img></app-upload-img>
   </ion-card-content>
 </ion-card>
