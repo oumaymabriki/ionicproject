@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePagePage implements OnInit {
 
-  constructor() { }
+  appStoarge = localStorage;
+
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  logOut() {
+    localStorage.clear();
+    this.router.navigate(['login'])
   }
 
 }

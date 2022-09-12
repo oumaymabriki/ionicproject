@@ -60,12 +60,18 @@ export class LoginPage implements OnInit {
      //this.service.login(this.form.value).subscribe();
      await this.authservice.authenticate(this.loginForm).toPromise()
      .then(res => {
-      localStorage.setItem('token', res.token);
+        localStorage.setItem('token', res.token);
+        localStorage.setItem('user', res.fullName);
+        localStorage.setItem('isAdmin', res.isAdmin.toString());
+        localStorage.setItem('id', res._id);
         this.fResponse.setMessage('Authenticated succeed.');
-        if(res.role == 'camper') this.router.navigate(['camperprofile']);
+        if(!res.isAdmin) this.router.navigate(['camperprofile']);
         else this.router.navigate(['adminprofile']);
         //this.router.navigate(['/']);
      })
-     .catch(err => this.fResponse.setError(err.error));
+     .catch(err => {
+      this.fResponse.setError(err.error)
+      alert('Authentication failed')
+     });
    }
 }

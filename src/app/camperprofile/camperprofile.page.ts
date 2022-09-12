@@ -1,3 +1,5 @@
+import { User } from './../models/user';
+import { UsersService } from './../services/users.service';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
@@ -12,16 +14,20 @@ import { Storage } from '@ionic/storage';
 })
 export class CamperprofilePage implements OnInit {
 
+  user = new User();
+
   back: boolean;
   data: '';
   constructor(public router: Router,
     //private httpClient: HttpClient,
-    //private service: AuthService,
+    private userService: UsersService,
    // private storage: Storage,
     private toastController: ToastController
     ) { }
 
   ngOnInit() {
+    this.userService.getUserById(localStorage.getItem('id')).toPromise()
+    .then(res => this.user = res)
     const data = this.router.url.split('/');
     console.log(data);
     // eslint-disable-next-line eqeqeq
@@ -30,7 +36,12 @@ export class CamperprofilePage implements OnInit {
   }
 
   loadInfo() {}
-  logout() {}
+
+
+  logout() {
+    localStorage.clear()
+    this.router.navigate(['login'])
+  }
   
 // loadInfo(){
 // this.service.getInfo().subscribe( res =>{

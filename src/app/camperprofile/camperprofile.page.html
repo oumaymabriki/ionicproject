@@ -37,19 +37,19 @@
     <ion-item>
       <ion-label>
         <ion-text>Name</ion-text>
-        <p><ion-text color="dark">oumayma briki</ion-text></p>
+        <p><ion-text color="dark">{{user.fullName | titlecase}}</ion-text></p>
       </ion-label>
     </ion-item>
     <ion-item>
       <ion-label>
         <ion-text>Phone</ion-text>
-        <p><ion-text color="dark">+21628807623</ion-text></p>
+        <p><ion-text color="dark">+{{user.phoneNumber}}</ion-text></p>
       </ion-label>
     </ion-item>
     <ion-item>
       <ion-label>
         <ion-text>Email</ion-text>
-        <p><ion-text color="dark">oumaymabriki@outlook.com</ion-text></p>
+        <p><ion-text color="dark">{{user.email}}</ion-text></p>
       </ion-label>
     </ion-item>
     <ion-item>

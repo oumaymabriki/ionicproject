@@ -31,11 +31,11 @@
         <ion-label>Sign Up</ion-label>
       </ion-list-header>
       <ion-item-group class="ion-margin-horizontal ion-margin-bottom">
-        <form [formGroup]="form" (ngsubmit)="onSubmit()">
+        <form [formGroup]="form" (ngsubmit)="signUp()">
 
           <div class="ion-margin-vertical">
             <ion-item>
-              <ion-input 
+              <ion-input [(ngModel)]="user.fullName"
                 formControlName="name" 
                 placeholder="Name" 
                 type="text">
@@ -65,7 +65,7 @@
                 fill="clear" 
                 color="success">VERIFIED
               </ion-button>
-              <ion-input 
+              <ion-input [(ngModel)]="user.phoneNumber"
                 formControlName="phone" 
                 placeholder="Mobile Number" 
                 type="tel"
@@ -87,7 +87,7 @@
 
           <div class="ion-margin-vertical">
             <ion-item>
-              <ion-input 
+              <ion-input [(ngModel)]="user.email"
                 formControlName="email" 
                 placeholder="Email Address" 
                 type="email">
@@ -114,7 +114,7 @@
                 color="medium"
                 (click)="changeType()">
               </ion-icon>
-              <ion-input 
+              <ion-input [(ngModel)]="user.password"
                 formControlName="password" 
                 placeholder="Password" 
                 [type]="type ? 'password' : 'text'">

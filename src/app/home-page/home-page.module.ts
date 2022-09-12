@@ -8,7 +8,6 @@ import { HomePagePageRoutingModule } from './home-page-routing.module';
 
 import { HomePagePage } from './home-page.page';
 import { CenterItemsPage } from '../center-items/center-items.page';
-import { CenterItemPage } from '../center-item/center-item.page';
 
 @NgModule({
   imports: [
@@ -17,6 +16,6 @@ import { CenterItemPage } from '../center-item/center-item.page';
     IonicModule,
     HomePagePageRoutingModule,
   ],
-  declarations: [HomePagePage, CenterItemPage]
+  declarations: [HomePagePage, CenterItemsPage]
 })
 export class HomePagePageModule {}
